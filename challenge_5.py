@@ -4,11 +4,11 @@ if n.isdigit():
     data = [0] * m
     for i in range(m):
         data[i] = int(input())
-        very_light = [0] * m
-        normal_load = [0] * m
-        heavy_load = [0] * m
-        overload = [0] * m
-        invalid_entries = [0] * m
+        very_light = [0]*m
+        normal_load = [0]*m
+        heavy_load =[0]*m
+        overload = [0]*m
+        invalid_entries = [0]*m
         vl = nl = hl = ol = inv = 0
         for i in range(m):
             if data[i] < 0:
@@ -27,8 +27,14 @@ if n.isdigit():
                 overload[ol] = data[i]
                 ol += 1
                 l = "ALURU GANESH"
-    if ((len(l) - l.count(" ")) % 3 == 2):
-                    print("normal:", normal_load[:nl])
-                    print("heavy:", heavy_load[:hl])
+                PLI=(len(l) - l.count(" ")) % 3
+    if (PLI == 2):
+        apli = (inv+ vl + ol)
+        print("Total valid weights",len(data)-inv)
+        print("count of affected items due to PLI:", apli)
+        print("length and PLI", len(l), PLI)
+        print("normal:", normal_load[:nl])
+        print("heavy:", heavy_load[:hl])
+
 else:
     print("invalid number")
