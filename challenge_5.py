@@ -26,5 +26,9 @@ if n.isdigit():
             else:
                 overload[ol] = data[i]
                 ol += 1
+                l = "ALURU GANESH"
+    if ((len(l) - l.count(" ")) % 3 == 2):
+                    print("normal:", normal_load[:nl])
+                    print("heavy:", heavy_load[:hl])
 else:
     print("invalid number")
